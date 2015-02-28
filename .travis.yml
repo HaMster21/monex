@@ -1,0 +1,18 @@
+language: cpp
+
+compiler:
+    - gcc
+    - clang
+
+install:
+    #Install biicode
+  - wget http://apt.biicode.com/install.sh && chmod +x install.sh && ./install.sh
+  - bii setup:cpp
+
+before_script:
+  - bii -v
+
+script:
+  - bii find --update
+  - bii cpp:configure
+  - bii cpp:build
