@@ -10,7 +10,7 @@ before_script:
 - tree
 - bii -v
 - cd ..
-- bii init build && cd buil
+- bii init build && cd build
 - bii new HaMster21/monex
 script:
 - mv -f monex/ build/blocks/HaMster21
