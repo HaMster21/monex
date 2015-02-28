@@ -3,7 +3,7 @@ compiler:
 - gcc
 - clang
 install:
-- sudo apt-g install tree
+- sudo apt-get install tree
 - wget http://apt.biicode.com/install.sh && chmod +x install.sh && ./install.sh
 - bii setup:cpp
 before_script:
