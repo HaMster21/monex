@@ -13,7 +13,7 @@ before_script:
   - bii -v
   - cd /tmp
   - bii init monex && cd monex
-  - bii new HaMster21/monex && cd HaMster21/monex
+  - bii new HaMster21/monex && cd blocks/HaMster21/monex
 
 script:
   - bii find --update
