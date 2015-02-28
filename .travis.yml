@@ -9,10 +9,11 @@ install:
 before_script:
 - tree
 - bii -v
-- bii init monex && cd monex
+- cd ..
+- bii init build && cd buil
 - bii new HaMster21/monex
 script:
-- cd ../..
+- mv -f monex/ build/blocks/HaMster21
 - tree
 - bii find --update
 - bii cpp:configure
