@@ -12,14 +12,15 @@ before_script:
 - cd ..
 - bii init build && cd build
 - bii new HaMster21/monex
+- pwd && tree
 script:
 - mv -f monex/ build/blocks/HaMster21
-- tree
+- pwd && tree
 - bii find --update
 - bii cpp:configure
-- tree
+- pwd && tree
 - bii cpp:build
-- tree
+- pwd && tree
 notifications:
   slack:
     secure: Bag3TWz5uYGZjrM0Q2LwkaP0pUpd+PMTAKOvinWhCcD2ZnY7/kE1SMjMfl2+IOxt0JSde2TqYZhYP9ZJ+8dYGKvnsVeSocV5CyHRyo3gClDNVt4EAR4O1AOV756lRiUau2RE88On3wtXOqyYP9QuPLE5dw/dchEy6Jc8KDgag4Q=
