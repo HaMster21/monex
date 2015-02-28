@@ -2,9 +2,14 @@
 # Initializes block variables
 INIT_BIICODE_BLOCK()
 
+include(biicode/boost/setup)
+
 # Actually create targets: EXEcutables and libraries.
 ADD_BIICODE_TARGETS()
 
+bii_find_boost([COMPONENTS system asio] [REQUIRED])
+
+target_include_directories(${BII_BLOCK_TARGET} INTERFACE ${Boost_INCLUDE_DIRS})
 
 # You can safely delete lines from here...
 
@@ -89,5 +94,3 @@ ADD_BIICODE_TARGETS()
 #
 #    SET_TARGET_PROPERTIES(${BII_BLOCK_TARGET} PROPERTIES COMPILE_DEFINITIONS "IOV_MAX=255")
 #
-
-
