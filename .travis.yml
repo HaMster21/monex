@@ -1,21 +1,23 @@
 language: cpp
-
 compiler:
-    - gcc
-    - clang
-
+- gcc
+- clang
 install:
-    #Install biicode
-  - wget http://apt.biicode.com/install.sh && chmod +x install.sh && ./install.sh
-  - bii setup:cpp
-
+- sudo apt install tree
+- wget http://apt.biicode.com/install.sh && chmod +x install.sh && ./install.sh
+- bii setup:cpp
 before_script:
-  - bii -v
-  - bii init monex && cd monex
-  - bii new HaMster21/monex
-
+- tree
+- bii -v
+- bii init monex && cd monex
+- bii new HaMster21/monex
 script:
-  - ls -alF
-  - bii find --update
-  - bii cpp:configure
-  - bii cpp:build
+- tree
+- bii find --update
+- bii cpp:configure
+- tree
+- bii cpp:build
+- tree
+notifications:
+  slack:
+    secure: Bag3TWz5uYGZjrM0Q2LwkaP0pUpd+PMTAKOvinWhCcD2ZnY7/kE1SMjMfl2+IOxt0JSde2TqYZhYP9ZJ+8dYGKvnsVeSocV5CyHRyo3gClDNVt4EAR4O1AOV756lRiUau2RE88On3wtXOqyYP9QuPLE5dw/dchEy6Jc8KDgag4Q=
