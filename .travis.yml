@@ -12,6 +12,7 @@ before_script:
 - bii init monex && cd monex
 - bii new HaMster21/monex
 script:
+- cd ../..
 - tree
 - bii find --update
 - bii cpp:configure
