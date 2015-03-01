@@ -3,23 +3,19 @@ compiler:
 - gcc
 - clang
 install:
-- sudo apt-get install tree
 - wget http://apt.biicode.com/install.sh && chmod +x install.sh && ./install.sh
 - bii setup:cpp
+
 before_script:
-- tree
 - bii -v
 - cd ..
 - bii init build && cd build
 - bii new HaMster21/monex
-- pwd && tree
 - mv -f ../monex/ blocks/HaMster21
-- pwd && tree
 
 script:
 - bii find --update
 - bii cpp:configure
-- pwd && tree
 - bii cpp:build
 
 notifications:
